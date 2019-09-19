@@ -55,7 +55,7 @@ def evaluate_ranking(model, test, train=None, k=10):
             continue
         test_neg_candidate = list(set(all_item) - set(row.indices) - set(train[user_id].indices))
         test_neg_nums = len(row.indices) * model._test_neg
-        test_neg = np.random.choice(a=test_neg_candidate, size=test_neg_nums, replace=False, p=None)
+        test_neg = np.random.choice(a=test_neg_candidate, size=test_neg_nums, p=None)
         item_ids = np.array(list(set(test_neg) | set(row.indices))).reshape(-1, 1)
         predictions = -model.predict(user_id, item_ids)
         item_ids = item_ids.flatten()
