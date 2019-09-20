@@ -181,7 +181,7 @@ if __name__ == '__main__':
     parser.add_argument('--test_root', type=str, default='data/reviews_Amazon_Instant_Video.json/video_test.csv')
     parser.add_argument('--L', type=int, default=5)
     parser.add_argument('--T', type=int, default=1)
-    parser.add_argument('--n_iter', type=int, default=20)
+    parser.add_argument('--n_iter', type=int, default=30)
     parser.add_argument('--seed', type=int, default=2018)
     parser.add_argument('--batch_size', type=int, default=1024)
     parser.add_argument('--learning_rate', type=float, default=1e-3)
